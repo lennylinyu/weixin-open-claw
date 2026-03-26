@@ -1,0 +1,96 @@
+{
+  "name": "weixin-open-claw",
+  "version": "0.1.0",
+  "description": "A toolkit library for WeChat Open Platform development",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    },
+    "./decrtpt": {
+      "types": "./dist/types/decrtpt/index.d.ts",
+      "import": "./dist/esm/decrtpt/index.js",
+      "require": "./dist/cjs/decrtpt/index.cjs"
+    },
+    "./message/*": {
+      "types": "./dist/types/message/*.d.ts",
+      "import": "./dist/esm/message/*.js",
+      "require": "./dist/cjs/message/*.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "clean": "rimraf dist",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "weixin",
+    "wechat",
+    "open-platform",
+    "sdk"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lennylinyu/weixin-open-claw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lennylinyu/weixin-open-claw/issues"
+  },
+  "homepage": "https://github.com/lennylinyu/weixin-open-claw#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "devDependencies": {
+
+ 
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.35.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.28.0",
+    "vitest": "^3.0.9"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "core-js": "^3.49.0"
+  }
+}

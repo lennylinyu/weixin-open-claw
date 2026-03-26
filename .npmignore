@@ -1,0 +1,24 @@
+# 源代码和配置文件 / Source code and config files
+src/
+tests/
+rollup.config.ts
+vitest.config.ts
+tsconfig.json
+eslint.config.mjs
+.editorconfig
+.prettierrc
+.nvmrc
+.github/
+
+# 开发文件 / Development files
+node_modules/
+coverage/
+*.log
+.DS_Store
+.env
+.env.*
+
+# 其他文档（README 和 LICENSE 已在 files 中指定）/ Other docs (README and LICENSE are specified in files)
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+CHANGELOG.md
