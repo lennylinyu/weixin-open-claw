@@ -64,14 +64,12 @@
   "type": "module",
   "sideEffects": false,
   "devDependencies": {
-
- 
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
-
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/node": "^22.13.10",
+    "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.22.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
@@ -91,6 +89,6 @@
     ]
   },
   "dependencies": {
-    "core-js": "^3.49.0"
+
   }
 }
