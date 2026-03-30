@@ -52,12 +52,12 @@ export interface EventStreamOptions {
  * Event stream event types
  */
 export type EventType =
-  | 'waiting'    // 等待扫码 / Waiting for scan
-  | 'scanned'    // 已扫码 / Scanned
-  | 'confirmed'  // 已确认 / Confirmed
-  | 'expired'    // 已过期 / Expired
-  | 'timeout'    // 超时 / Timeout
-  | 'error';     // 错误 / Error
+  | 'waiting' // 等待扫码 / Waiting for scan
+  | 'scanned' // 已扫码 / Scanned
+  | 'confirmed' // 已确认 / Confirmed
+  | 'expired' // 已过期 / Expired
+  | 'timeout' // 超时 / Timeout
+  | 'error'; // 错误 / Error
 
 /**
  * 事件流事件

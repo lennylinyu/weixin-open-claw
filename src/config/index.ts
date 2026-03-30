@@ -6,7 +6,7 @@
  * Manages global SDK settings such as base URL, CDN address, and bot type
  */
 
-import { BaseInfo } from "../types";
+import { BaseInfo } from '../types';
 
 /**
  * 微信开放平台默认 API 基础 URL
@@ -42,14 +42,14 @@ export const DEFAULT_API_TIMEOUT_MS = 15_000;
  * 全局配置对象
  * Global configuration object
  */
-const config  = {
+const config = {
   /** API 基础地址 / API base URL */
-  base : WEIXIN_DEFAULT_BASE_URL,
+  base: WEIXIN_DEFAULT_BASE_URL,
   /** CDN 基础地址 / CDN base URL */
-  cdn : WEIXIN_CDN_BASE_URL,
+  cdn: WEIXIN_CDN_BASE_URL,
   /** Bot 类型 / Bot type */
-  botType : WEIXIN_DEFAULT_ILINK_BOT_TYPE,
-}
+  botType: WEIXIN_DEFAULT_ILINK_BOT_TYPE,
+};
 
 /**
  * 构建基础请求信息
@@ -69,7 +69,7 @@ export function buildBaseInfo(): BaseInfo {
  * @returns CDN 基础 URL / CDN base URL
  */
 export function getCdnUrl() {
-  return config.cdn ?? WEIXIN_CDN_BASE_URL
+  return config.cdn ?? WEIXIN_CDN_BASE_URL;
 }
 
 /**
@@ -79,7 +79,7 @@ export function getCdnUrl() {
  * @returns Bot 类型字符串 / Bot type string
  */
 export function getBotType() {
-  return config.botType ?? WEIXIN_DEFAULT_ILINK_BOT_TYPE
+  return config.botType ?? WEIXIN_DEFAULT_ILINK_BOT_TYPE;
 }
 
 /**
@@ -89,7 +89,7 @@ export function getBotType() {
  * @returns API 基础 URL / API base URL
  */
 export function getDefaultBaseUrl() {
-  return config.base ?? WEIXIN_DEFAULT_BASE_URL
+  return config.base ?? WEIXIN_DEFAULT_BASE_URL;
 }
 
 /**

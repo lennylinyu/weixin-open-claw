@@ -6,7 +6,7 @@
  * Used for encrypting files before upload and decrypting after download
  */
 
-import { createCipheriv, createDecipheriv } from "node:crypto";
+import { createCipheriv, createDecipheriv } from 'node:crypto';
 
 /**
  * 使用 AES-128-ECB 加密数据（PKCS7 填充，Node.js 默认）
@@ -17,7 +17,7 @@ import { createCipheriv, createDecipheriv } from "node:crypto";
  * @returns 加密后的密文 / Encrypted ciphertext
  */
 export function encryptAesEcb(plaintext: Buffer, key: Buffer): Buffer {
-  const cipher = createCipheriv("aes-128-ecb", key, null);
+  const cipher = createCipheriv('aes-128-ecb', key, null);
   return Buffer.concat([cipher.update(plaintext), cipher.final()]);
 }
 
@@ -30,7 +30,7 @@ export function encryptAesEcb(plaintext: Buffer, key: Buffer): Buffer {
  * @returns 解密后的明文 / Decrypted plaintext
  */
 export function decryptAesEcb(ciphertext: Buffer, key: Buffer): Buffer {
-  const decipher = createDecipheriv("aes-128-ecb", key, null);
+  const decipher = createDecipheriv('aes-128-ecb', key, null);
   return Buffer.concat([decipher.update(ciphertext), decipher.final()]);
 }
 

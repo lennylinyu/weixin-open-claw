@@ -6,8 +6,8 @@
  * Provides delay, ID generation, MD5 hashing, header creation and other utilities
  */
 
-import crypto from "node:crypto";
-import { createReadStream } from "node:fs";
+import crypto from 'node:crypto';
+import { createReadStream } from 'node:fs';
 
 /**
  * 延迟指定毫秒数
@@ -27,7 +27,7 @@ export const delay = (ms = 0) =>
  * @returns 唯一 ID 字符串 / Unique ID string
  */
 export function generateId(prefix: string): string {
-  return `${prefix}:${Date.now()}-${crypto.randomBytes(4).toString("hex")}`;
+  return `${prefix}:${Date.now()}-${crypto.randomBytes(4).toString('hex')}`;
 }
 
 /**
@@ -37,7 +37,7 @@ export function generateId(prefix: string): string {
  * @returns 客户端 ID 字符串 / Client ID string
  */
 export function generateClientId(): string {
-  return generateId("openclaw-weixin");
+  return generateId('openclaw-weixin');
 }
 
 /**
@@ -48,7 +48,7 @@ export function generateClientId(): string {
  * @returns 十六进制 MD5 哈希字符串 / Hex MD5 hash string
  */
 export function createMD5(data: string | Buffer) {
-  return crypto.createHash("md5").update(data).digest("hex");
+  return crypto.createHash('md5').update(data).digest('hex');
 }
 
 /**
@@ -83,5 +83,5 @@ export function createHeader(token: string) {
     'X-WECHAT-UIN': Buffer.from(
       (Math.random() * 0xffffffff + Date.now()).toString(),
     ).toString('base64'),
-  }
+  };
 }
